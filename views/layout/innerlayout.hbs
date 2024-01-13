@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VectorCrop Projects">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#0134d4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Title-->
+  <title>VectorCrop Projects</title>
+  <!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+  <!-- Favicon-->
+  <link rel="icon" href="../img/core-img/favicon.ico">
+  <link rel="apple-touch-icon" href="../img/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="../img/icons/icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/icons/icon-180x180.png">
+  <!-- CSS Libraries-->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <link rel="stylesheet" href="../css/ion.rangeSlider.min.css">
+  <link rel="stylesheet" href="../css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../css/apexcharts.css">
+  <!-- Core Stylesheet-->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/custome.css">
+
+  <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
+
+  <!-- Web App Manifest-->
+  <link rel="manifest" href="../css/manifest.json">
+</head>
+<style>
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
+
+  .preloader {
+    background-color: black;
+  }
+
+  .bg-dark {
+    background-color: #000000 !important;
+  }
+
+  [data-theme='dark'] body .sidenav-wrapper {
+    background-color: #000000;
+  }
+
+  .sidenav-profile {
+    background-color: #0b0c11;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+</style>
+
+<body class="pe-0">
+  <!-- Preloader-->
+  <div class="preloader d-flex align-items-center justify-content-center bg-dark" id="preloader">
+    <div class="circle-loader">
+      <div class="circle-big"></div>
+    </div>
+  </div>
+  <!-- Internet Connection Status-->
+  <div class="internet-connection-status" id="internetStatus"></div>
+  <!-- Header Area-->
+
+  {{#if admin}}
+  {{>admin-header}}
+  {{else}}
+  {{>user-header}}
+  {{>user-footer}}
+  {{/if}}
+
+  {{{body}}}
+
+  <script>
+    function updateClock() {
+      const currentTime = new Date();
+      const options = { timeZone: 'Asia/Kolkata' };
+      const formattedTime = currentTime.toLocaleTimeString('en-IN', options);
+
+      const formattedDate = formatDate(currentTime);
+
+      document.getElementById('clock').innerHTML = `<h6 class="mb-3">${formattedTime}  | ${formattedDate}</h6>`;
+    }
+
+    function formatDate(date) {
+      const dd = String(date.getDate()).padStart(2, '0');
+      const mm = String(date.getMonth() + 1).padStart(2, '0');
+      const yy = String(date.getFullYear()).slice(-2);
+      return `${dd}/${mm}/${yy}`;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    // Initial call to display the clock immediately
+    updateClock();
+  </script>
+
+  <!-- All JavaScript Files-->
+  <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/default/internet-status.js"></script>
+  <script src="../js/waypoints.min.js"></script>
+  <script src="../js/jquery.easing.min.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.counterup.min.js"></script>
+  <script src="../js/jquery.countdown.min.js"></script>
+  <script src="../js/imagesloaded.pkgd.min.js"></script>
+  <script src="../js/isotope.pkgd.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/default/dark-mode-switch.js"></script>
+  <script src="../js/ion.rangeSlider.min.js"></script>
+  <script src="../js/jquery.dataTables.min.js"></script>
+  <script src="../js/default/active.js"></script>
+  <script src="../js/default/clipboard.js"></script>
+  <!-- PWA-->
+  <script src="../js/pwa.js"></script>
+</body>
+
+
+</html>

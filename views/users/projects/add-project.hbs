@@ -1,0 +1,215 @@
+<br>
+
+<div class="container mt-5">
+
+    <div class="card mb-2 mt-3">
+        <div class="card-body p-2">
+            <div class="d-flex align-items-center justify-content-between"> <a href="/all-projects">
+                    <i class="bi bi-arrow-left-circle text-white h3 align-middle mt-2 ms-3"></i>
+                </a>
+                <center>
+                    <h5 style="margin-right: 30px;">Add New Projects</h5>
+                </center>
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <form action="/add-project" method="POST" enctype="multipart/form-data">
+                <p>Project Details</p>
+
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Project Code | #VCP</span>
+                    <input class="form-control" type="number" name="pcode" placeholder="0001" required>
+                </div>
+
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Project Title</span>
+                    <input class="form-control" type="text" name="ptitle" placeholder="" required>
+                </div>
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Project Description</span>
+                    <input class="form-control" type="text" name="pdesc" placeholder="">
+                </div>
+
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Project Link</span>
+                    <input class="form-control" type="text" name="plink" placeholder="">
+                </div>
+
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Project Github Repository
+                        Link</span>
+                    <input class="form-control" type="text" name="pglink" placeholder="">
+                </div>
+
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Project Category</span>
+                    <select class="form-select" id="defaultSelect" name="pcategory" aria-label="Default select example">
+                        <option value="1" selected>Select Category</option>
+                        <option value="Website">Website</option>
+                        <option value="App">App</option>
+                        <option value="UI/UX">UI/UX Design</option>
+                        <option value="Poster">Poster</option>
+                        <option value="Video">Video</option>
+                        <option value="Backend Service">Backend Service</option>
+                        <option value="Hosting Service">Hosting Service</option>
+                        <option value="Other">Other</option>
+
+
+                    </select>
+                </div>
+
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Project Status</span>
+                    <select class="form-select" id="defaultSelect" name="pstatus" aria-label="Default select example">
+                        <option value="1" selected>Select Status</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Progress">Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                        <option value="Cancelled">Cancelled</option>
+
+                    </select>
+                </div>
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Upload Logo</span>
+                    <input class="form-control" type="file" placeholder="" name="Image">
+                </div>
+
+
+
+                <p>Time Estimation</p>
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Project Estimate Time</span>
+                    <input class="form-control" type="text" name="petime" placeholder="">
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group mb-3"><span class="input-group-text" id="to">Starting Date</span>
+                            <input class="form-control" type="date" name="psd" placeholder="">
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="input-group mb-3"><span class="input-group-text" id="to">Completion Date</span>
+                            <input class="form-control" type="date" name="pcd" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <p>Cost Estimation</p>
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Estimate Total Cost ₹</span>
+                    <input class="form-control" type="text" name="ptcost" placeholder="">
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="input-group mb-3"><span class="input-group-text" id="to">Payment Type</span>
+                            <select class="form-select" id="defaultSelect" name="paytype"
+                                aria-label="Default select example">
+                                <option value="1" selected>Select Type</option>
+                                <option value="Advance">Advance</option>
+                                <option value="1st-interim">1st interim</option>
+                                <option value="2nd-interim">2nd interim</option>
+                                <option value="3rd-interim">3rd interim</option>
+                                <option value="not paid">Not Paid</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group mb-3"><span class="input-group-text" id="to">Estimate Payment
+                                ₹</span>
+                            <input class="form-control" type="text" name="epay" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="input-group mb-3"><span class="input-group-text" id="to">Payment Date</span>
+                            <input class="form-control" type="date" name="payd" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <p>Client Details</p>
+
+
+                <div class="input-group mb-3"><span class="input-group-text" id="to">Client Name</span>
+                    <input class="form-control" type="text" name="cname" placeholder="" aria-label="Username">
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group mb-3"><span class="input-group-text" id="to">Client Mobile Number</span>
+                            <input class="form-control" type="number" name="cphone" placeholder=""
+                                aria-label="Username">
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="input-group mb-3"><span class="input-group-text" id="to">Client Email</span>
+                            <input class="form-control" type="email" name="cemail" placeholder="" aria-label="Username">
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <p>Developers Details</p>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Mishab" name="devs" id="Mishab">
+                            <label class="form-check-label" for="Mishab"> Mishab</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Shabeer Alavi" name="devs"
+                                id="Shabeer Alavi">
+                            <label class="form-check-label" for="Shabeer Alavi"> Shabeer Alavi</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Gokul" name="devs" id="Gokul">
+                            <label class="form-check-label" for="Gokul"> Gokul Sreejith</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="ShabeerOp" name="devs" id="Shabeer">
+                            <label class="form-check-label" for="Shabeer"> Shabeer OP</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Jaseem" name="devs" id="Jaseem">
+                            <label class="form-check-label" for="Jaseem"> Jaseem</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Ajzal" name="devs" id="Ajzal">
+                            <label class="form-check-label" for="Ajzal"> Ajzal</label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group mt-3">
+                    <label class="form-label" for="message">Note</label>
+                    <textarea class="form-control" id="message" name="note" cols="3" rows="5" placeholder=""></textarea>
+                </div>
+                <button class="btn btn-primary w-100" type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+</div>

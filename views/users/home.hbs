@@ -1,0 +1,304 @@
+<!-- Add new contact modal-->
+<div class="add-new-contact-modal modal fade px-0" id="addnewcontact" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="addnewcontactlabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="modal-title" id="addnewcontactlabel">Quick Note/Save</h6>
+                    <button class="btn btn-close p-1 ms-auto me-0" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <form action="#">
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Title</span>
+                        <input class="form-control" type="text" placeholder="" aria-label="Username"
+                            aria-describedby="to">
+                    </div>
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Category</span>
+                        <select class="form-select" id="defaultSelect" name="" aria-label="Default select example">
+                            <option value="1" selected>Select Category</option>
+                            <option value="2">Document</option>
+                            <option value="3">Pdf</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Upload</span>
+                        <input class="form-control" type="file" placeholder="" aria-label="Username"
+                            aria-describedby="to">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="form-control" id="message" name="textarea" cols="3" rows="5"
+                            placeholder=""></textarea>
+                    </div>
+                    <button class="btn btn-primary w-100" type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-content-wrapper py-3">
+    <!-- Add New Contact-->
+
+    <div class="container-lg">
+
+        <!-- User Status Slide-->
+
+        <!-- Element Heading-->
+        <div class=" shadow-none mt-4 mb-2">
+            <div class="card-body p-2">
+                <h5 class="d-flex align-items-center justify-content-between ms-0 text-truncate h3 mt-1">Dashboard
+                    <button data-bs-toggle="" data-bs-target="#addnewcontact" class="btn btn-primary">
+                        <i class="bi bi-plus-circle align-middle"></i> Add Quick Note
+                    </button>
+                </h5>
+            </div>
+        </div>
+
+
+
+        {{!-- <div class="top-products-area product-list-wrap">
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="card single-product-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="card-side-img p-0" style="margin-right: -455px;">
+
+                                            <img src="images/user.png" width="12%">
+                                        </div>
+                                        <div class="card-content px-4 py-2">
+                                            {{#if user}}
+                                            <h5 class=" d-block text-truncate mt-0 mb-0">Hello {{user.Name}}👋</h5>
+                                            <p class="mt-0 mb-0">{{user.Email}}</p>
+                                            {{/if}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center" style="margin-left: -23px;">
+
+
+                                        <div class="card-content px-4 py-2">
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">Total
+                                                Passwords :</p>
+                                            <h6 style="display: inline-block; margin: 0;">34</h6>
+                                            <br>
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">Total
+                                                Reminders :</p>
+                                            <h6 style="display: inline-block; margin: 0;">210</h6>
+                                        </div>
+
+                                        <div class="card-content px-4 py-2">
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">Total
+                                                Documents :</p>
+                                            <h6 style="display: inline-block; margin: 0;">67</h6>
+                                            <br>
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">Total
+                                                Files :</p>
+                                            <h6 style="display: inline-block; margin: 0;">10</h6>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col " style="margin-left: -78px;">
+                                    <div class="d-flex align-items-center" style="margin-top: 13px;">
+                                        <div class="row">
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary">
+                                                    <i class="bi bi-person align-middle"></i> My Profile
+                                                </button>
+
+                                                <button type="button" class="btn btn-outline-light ml-2 ">
+                                                    <i class="bi bi-arrow-down-right-circle align-middle"></i> My Status
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+
+
+
+        {{!-- <div class="row mt-3 ">
+            <div class="col-lg-4 mb-3">
+                <div class="card p-5">
+                    <div id="clock"></div>
+
+                    <img src="images/cal.png" width="100%">
+                </div>
+                <div class="card p-4 mt-3">
+                    <a href="" class="btn btn-primary">Add Event +</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card  p-3">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <table class="data-table table-bordered w-100" id="dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>$320,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garrett Winters</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>$170,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>$86,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garrett Winters</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>$170,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garrett Winters</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>$170,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>$86,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>$86,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cedric Kelly</td>
+                                        <td>Senior Javascript Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td>$433,060</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Airi Satou</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>$162,700</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Caesar Vance</td>
+                                        <td>Pre-Sales Support</td>
+                                        <td>New York</td>
+                                        <td>$106,450</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        --}}
+
+
+
+        <div class="row mt-3">
+            <div class="col-lg-8 mb-3">
+                <div class="card p-4">
+                    <h5 class="mb-0">Documents</h5>
+                    <hr class="mb-3">
+
+                    <a class="page--item" href="/all-projects">
+                        <div class="icon-wrapper"><i class="bi bi-file-earmark-plus"></i>
+                        </div>Our Projects <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-chevron-right"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <a class="page--item" href="#!">
+                        <div class="icon-wrapper"><i class="bi bi-file-earmark-plus"></i>
+                        </div>CSV Documents <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-chevron-right"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <a class="page--item" href="#!">
+                        <div class="icon-wrapper"><i class="bi bi-file-earmark-plus"></i>
+                        </div>Image <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-chevron-right"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <p class="mt-4">Password Management</p>
+
+                    <a class="page--item" href="#!">
+                        <div class="icon-wrapper"><i class="bi bi-eye-slash"></i>
+                        </div>Password <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-chevron-right"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                            </path>
+                        </svg>
+                    </a>
+
+
+
+                    <style>
+                        p:hover {
+                            color: tomato;
+                        }
+                    </style>
+
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card p-5">
+                    <h5 class="mb-0">General Information</h5>
+                    <hr class="mb-3">
+                    <p>Current User : Mishab</p>
+                    <p>User Mobile : 1122334455</p>
+                    <p>User Email : mishabdev@gmail.com</p>
+                    <hr>
+                    <p>Website Link : mycms.com</p>
+                    <p>Website Type : CMS</p>
+                    <p>Creation Date : 20/01/2024</p>
+
+
+                </div>
+            </div>
+        </div>
+
+        {{!-- ------------------------------------------------- --}}
+    </div>
+</div>

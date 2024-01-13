@@ -1,0 +1,308 @@
+<div class="add-new-contact-modal modal fade px-0" id="addnewcontact" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="addnewcontactlabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="modal-title" id="addnewcontactlabel">Add New Project</h6>
+                    <button class="btn btn-close p-1 ms-auto me-0" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <hr style="background-color: white;">
+
+                <form action="/add-pdf" method="POST" enctype="multipart/form-data">
+                    <p>Project Details</p>
+
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Project Code | #VCP</span>
+                        <input class="form-control" type="text" name="pcode" placeholder="0001" aria-label=""
+                            aria-describedby="to">
+                    </div>
+
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Project Title</span>
+                        <input class="form-control" type="text" name="ptitle" placeholder="" aria-label=""
+                            aria-describedby="to">
+                    </div>
+
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Project Status</span>
+                        <select class="form-select" id="defaultSelect" name="pstatus"
+                            aria-label="Default select example">
+                            <option value="1" selected>Select Status</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Progress">Progress</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                            <option value="Cancelled">Cancelled</option>
+
+                        </select>
+                    </div>
+
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Project Link</span>
+                        <input class="form-control" type="text" name="plink" placeholder="" aria-label=""
+                            aria-describedby="to">
+                    </div>
+
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Project Github Repository
+                            Link</span>
+                        <input class="form-control" type="text" name="pglink" placeholder="" aria-label=""
+                            aria-describedby="to">
+                    </div>
+
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Estimate Cost ₹</span>
+                        <input class="form-control" type="text" name="pcost" placeholder="" aria-label=""
+                            aria-describedby="to">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="input-group mb-3"><span class="input-group-text" id="to">Estimate Payment
+                                    ₹</span>
+                                <input class="form-control" type="text" name="pcost" placeholder="" aria-label=""
+                                    aria-describedby="to">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="input-group mb-3"><span class="input-group-text" id="to">Date</span>
+                                <input class="form-control" type="date" name="pcost" placeholder="" aria-label=""
+                                    aria-describedby="to">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Client Name</span>
+                        <input class="form-control" type="text" name="title" placeholder="" aria-label="Username"
+                            aria-describedby="to">
+                    </div>
+
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Project Category</span>
+                        <select class="form-select" id="defaultSelect" name="category"
+                            aria-label="Default select example">
+                            <option value="1" selected>Select Category</option>
+                            <option value="Document">Document</option>
+                            <option value="Pdf">Pdf</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-group mb-3"><span class="input-group-text" id="to">Upload</span>
+                        <input class="form-control" type="file" placeholder="" name="Document" aria-label=""
+                            aria-describedby="to">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="form-control" id="message" name="note" cols="3" rows="5"
+                            placeholder=""></textarea>
+                    </div>
+                    <button class="btn btn-primary w-100" type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-content-wrapper py-3">
+    <!-- Add New Contact-->
+
+    <div class="container-lg">
+
+        <!-- User Status Slide-->
+
+        <!-- Element Heading-->
+
+
+        <div class="card mb-2 mt-3">
+            <div class="card-body p-2">
+                <div class="d-flex align-items-center justify-content-between"> <a href="/">
+                        <i class="bi bi-arrow-left-circle text-white h3 align-middle mt-2 ms-3"></i>
+                    </a>
+                    <center>
+                        <h5 style="margin-left: 83px;">Our Projects</h5>
+                    </center>
+                    <a href="/add-project" class="btn btn-primary">
+                        <i class="bi bi-plus-circle align-middle"></i> Add New Project
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        {{!-- <div class="top-products-area product-list-wrap">
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="card single-product-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="card-side-img p-0" style="margin-right: -455px;">
+
+                                            <img src="images/user.png" width="12%">
+                                        </div>
+                                        <div class="card-content px-4 py-2">
+                                            <h5 class=" d-block text-truncate mt-0 mb-0">Hello Mishab👋</h5>
+                                            <p class="mt-0 mb-0">mishabdev@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="d-flex align-items-center" style="margin-left: -23px;">
+
+                                        <div class="card-content px-4 py-2">
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">
+                                                Total Projects :</p>
+                                            <h6 style="display: inline-block; margin: 0;">29</h6>
+                                            <br>
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">
+                                                Total Files :</p>
+                                            <h6 style="display: inline-block; margin: 0;">149</h6>
+                                        </div>
+
+                                        <div class="card-content px-4 py-2">
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">
+                                                Total Passwords :</p>
+                                            <h6 style="display: inline-block; margin: 0;">34</h6>
+                                            <br>
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">
+                                                Total Reminders :</p>
+                                            <h6 style="display: inline-block; margin: 0;">210</h6>
+                                        </div>
+
+                                        <div class="card-content px-4 py-2">
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">
+                                                Total Documents :</p>
+                                            <h6 style="display: inline-block; margin: 0;">67</h6>
+                                            <br>
+                                            <p class="mt-0 mb-0" style="display: inline-block; margin-right: 5px;">
+                                                Total Savings :</p>
+                                            <h6 style="display: inline-block; margin: 0;">10</h6>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col " style="margin-left: -78px;">
+                                    <div class="d-flex align-items-center" style="margin-top: 13px;">
+                                        <div class="row">
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary">
+                                                    <i class="bi bi-person align-middle"></i> My Profile
+                                                </button>
+
+                                                <button type="button" class="btn btn-outline-light ml-2 ">
+                                                    <i class="bi bi-arrow-down-right-circle align-middle"></i> My
+                                                    Status
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+
+        <style>
+            ::-webkit-scrollbar-thumb {
+                background-color: #fff;
+                margin-top: 10px;
+                /* Color of the scrollbar thumb (the draggable part) */
+            }
+
+            ::-webkit-scrollbar-track {
+                margin-top: 10px;
+
+                background-color: #272727;
+                /* Color of the scrollbar track (the non-draggable part) */
+            }
+        </style>
+
+        <div class="row mt-3 ">
+
+            <div class="col-lg-12">
+                <div class="card  p-3">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <div class="table-responsive">
+
+                                <table class="data-table table-bordered w-100" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Icon</th>
+                                            <th>Project Code</th>
+                                            <th>Project Title</th>
+                                            <th>Project Desc</th>
+                                            <th>Project Link</th>
+                                            <th>Github Link</th>
+                                            <th>Category</th>
+                                            <th>Status</th>
+                                            <th>Est. Time</th>
+                                            <th>Starting Date</th>
+                                            <th>Completion Date</th>
+                                            <th>Total Cost</th>
+                                            <th>PaymentType</th>
+                                            <th>Est. Pay</th>
+                                            <th>Payment Date</th>
+                                            <th>Client Name</th>
+                                            <th>Client Phone</th>
+                                            <th>Client Email</th>
+                                            <th>Developers</th>
+                                            <th>Note</th>
+                                            <th>Actions</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each projects}}
+                                        <tr>
+
+                                            <td>{{incremented @index}}</td>
+                                            <td><img src="/images/project-images/{{this._id}}.png" alt=""
+                                                    style="width: 3rem"></td>
+                                            <td>#VCP{{this.pcode}}</td>
+                                            <td>{{this.ptitle}}</td>
+                                            <td>{{this.pdesc}}</td>
+                                            <td>{{this.plink}}</td>
+                                            <td>{{this.pglink}}</td>
+                                            <td>{{this.pcategory}}</td>
+                                            <td>{{this.pstatus}}</td>
+                                            <td>{{this.petime}}</td>
+                                            <td>{{this.psd}}</td>
+                                            <td>{{this.pcd}}</td>
+                                            <td>{{this.ptcost}}</td>
+                                            <td>{{this.paytype}}</td>
+                                            <td>{{this.epay}}</td>
+                                            <td>{{this.payd}}</td>
+                                            <td>{{this.cname}}</td>
+                                            <td>{{this.cphone}}</td>
+                                            <td>{{this.cemail}}</td>
+                                            <td>{{this.devs}}</td>
+                                            <td>{{this.note}}</td>
+                                            <td><a href="" class="" style="margin-right:10px;"><i
+                                                        class="bi bi-pen text-white "></i></a>
+                                                <a href="" class=""><i class="bi bi-trash text-danger"></i></a>
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
