@@ -5,13 +5,16 @@
   var toggleSwitch = document.getElementById('darkSwitch');
   var currentTheme = localStorage.getItem('theme');
 
-  if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    if (currentTheme === 'dark') {
-      if (toggleSwitch) {
-        toggleSwitch.checked = true;
-      }
-    }
+  // Set the default theme to dark if no theme is set
+  if (!currentTheme) {
+    currentTheme = 'dark';
+    localStorage.setItem('theme', 'dark');
+  }
+
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (currentTheme === 'dark' && toggleSwitch) {
+    toggleSwitch.checked = true;
   }
 
   function switchTheme(e) {
@@ -23,6 +26,7 @@
       localStorage.setItem('theme', 'light');
     }
   }
+
   if (toggleSwitch) {
     toggleSwitch.addEventListener('change', switchTheme, false);
   }
@@ -30,6 +34,8 @@
   $('#darkSwitch').on('click', function () {
     $('.dark-mode-switching').fadeIn(50).delay(1000).fadeOut(250);
   });
+
+
 
   // RTL Mode JS
   var rtltoggleSwitch = document.getElementById('rtlSwitch');
